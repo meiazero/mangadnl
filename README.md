@@ -7,6 +7,9 @@
 git clone  https://github.com/meiazero/mangadnl.git
 ```
 ```bash
+  pip install beautifulsoup4
+```
+```bash
 mv mangadnl <path your folder>
 ```
 ```bash 
