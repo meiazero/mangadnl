@@ -7,7 +7,7 @@ from dnl import GetAllLinksImages, Downloader
 
 class DownloaderMangar():
 
-    CLI_VERSION = "0.0.1"
+    CLI_VERSION = "0.2"
 
     def __init__(self):
         self.__run()
