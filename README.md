@@ -13,7 +13,7 @@ git clone  https://github.com/meiazero/mangadnl.git
 mv mangadnl <path your folder>
 ```
 ```bash 
-ln -s <path your folder>/main.py /usr/local/bin/mangadnl
+ln -s <path your folder>/src/main.py /usr/local/bin/mangadnl
 ```
 
 ## Usage
