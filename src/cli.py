@@ -2,8 +2,7 @@ import os
 import sys
 import argparse
 import logging
-import requests
-from dnl import GetAllLinksImages
+from dnl import GetAllLinksImages, Downloader
 
 
 class DownloaderMangar():
@@ -69,10 +68,10 @@ class DownloaderMangar():
 
                 try:
                     if alias_name_manga != "":
-                        downloader(
+                        Downloader(
                             _urls, alias_name_manga, num_chapter)
                     else:
-                        downloader(
+                        Downloader(
                             _urls, args_parser.manga, num_chapter)
                 except Exception as e:
                     print(e)
@@ -86,14 +85,3 @@ class DownloaderMangar():
 
     def __args(self):
         return self.parser.parse_args()
-
-
-def downloader(urls, name, cap=1):
-    for i in range(1, len(urls)):
-        print(f"downloading: {name}/{cap:03d}/{i:03d}")
-
-        os.makedirs(f"{name}/{cap:03d}", exist_ok=True)
-        img = requests.get(urls[i]).content
-
-        with open(f"{name}/{cap:03d}/{i:03d}.jpg", "wb") as f:
-            f.write(img)
